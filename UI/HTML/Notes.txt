@@ -1,0 +1,38 @@
+-----------------------
+Web-UI
+-----------------------
+
+UI - User Interface
+UI - Content/data + Style + behavior
+
+Content ==> HTML
+Style   ==> CSS
+behavior ==> Java Script
+
+HTML - Hypertext markup language
+--------------------------------------
+    -> use to design sttaic page on browser
+    -> HTML is for presentation purpose only
+    -> XML is for processing / storing data
+
+DOM - Document Object Model
+---------------------------------
+-> DOM is a tree like structure
+-> Every element in the dom allines as tree
+
+Note:  npm install -g live-server
+Later: live-server
+
+HTML Elements / Tags
+
+1. Heading Tags
+    -> h1   
+    -> h2
+    -> h3
+    -> h4
+    -> h5
+    -> h6
+
+ //---------------------------------------------------------   
+
+
