@@ -36,3 +36,25 @@ HTML Elements / Tags
  //---------------------------------------------------------   
 
 
+W3c - HTML is w3c recamended 
+
+
+HTML4 - 15 years
+XHTML
+HTML5
+
+
+Basic HTML Elements
+
+Header Tags
+Formating Tags like b, i, u .. etc
+Page break   br
+Horizontol rule   hr
+para graph   p
+
+---------------------------------------------
+
+
+
+
+
