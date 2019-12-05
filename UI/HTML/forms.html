@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+
+  
+</head>
+<body>
+    <h1>Form Demo</h1> <hr>
+
+    <form name="mf" action="www.abc.com/store" method="GET" autocomplete="off" > 
+
+        <label>First Name:</label>
+        <input type="text" id="fn" required> <br>
+        Last Name :<input type="text" name="ln" id="ln"> <br>
+        Age : <input type="text" name="age" id="age" size="2" maxlength="2" minlength="1"><br>
+        Password: <input type="password" name="pwd" id="pwd"> <br>
+        Gender: <input type="radio" name="g1" id="g1" value="Male"> Male
+                <input type="radio" name="g1" id="g2" value="Female">Female <br>
+        Hibbies: <input type="checkbox" name="hob">Chess
+        <input type="checkbox" name="hob">Cricket
+        <input type="checkbox" name="hob">Volley Ball
+        <input type="checkbox" name="hob">Indore Games
+        <input type="checkbox" name="hob">Outdoor Games <br>
+        Select Couse: <select name="courseName">
+            <option>Bsc</option>
+            <option>Msc</option>
+            <option>Dsc</option>
+            <option>Csc</option>
+            <option>Jsc</option>
+        </select> <br>
+
+        Select Couse: <select name="courseName" multiple>
+                <option>Bsc</option>
+                <option>Msc</option>
+                <option>Dsc</option>
+                <option>Csc</option>
+                <option>Jsc</option>
+            </select> <br>
+
+        Select File to Uplaod: <input type="file"> <br>
+        Select Age: <input type="number"> <br>
+        Select Age: <input type="range" min="18" max="99"> <br>
+        Change Color: <input type="color"> <br>
+        Select Date: <input type="date"> <br> 
+        Select Date and Time: <input type="datetime-local"> <br>
+       Email <input type="email">
+       <hr>
+       <input type="submit" value="Register">
+       <input type="reset" value="Clear All">
+       <button>Normal Button</button>
+       <button type="submit">Submited</button>
+       <button type="reset">Reset All</button>
+
+
+
+    </form>
+
+
+</body>
+</html>
