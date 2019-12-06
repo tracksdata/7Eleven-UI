@@ -1,0 +1,21 @@
+Types of CSS
+1. Inline CSS
+2. Internal or Embeded CSS
+3. External CSS
+
+Notes
+-----
+1. class
+2. id
+
+1. class
+------------
+-> class can be repeated as many times  you want
+-> class must starts with . (period) symbol
+-> class name can be anything
+-> Single HTML element can have multiple classes
+
+2. id
+-----------
+-> id can not be repeated in a single html element
+-> id must start with # (hash) symbol
