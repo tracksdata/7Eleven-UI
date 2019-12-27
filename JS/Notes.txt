@@ -1,0 +1,22 @@
+Notes
+---------
+
+1. HTML is w3c spec
+2. Java Script is  ECMA Script (ES)
+3. ES-5 - 2009 - Functional 
+4. ES-6 - 2018 - OPPS  + FP
+5. ES-7 - 2019
+
+
+Java Script Objects
+-------------------------------
+1. Built in Objects
+    -> Object
+    -> Array
+    -> Date
+    -> Timer
+2. User defined Objects
+    -> Can be created with a functiion constructor - ES 5
+    -> Can be craeted with a class name  - ES 6
+
+
