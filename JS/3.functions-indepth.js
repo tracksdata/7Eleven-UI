@@ -169,7 +169,7 @@ function f1(){
 
 
 
-var f333=aaa();
+//var f333=aaa();
 var aaa=function(){
 console.log('--- t1');
 
@@ -181,6 +181,4 @@ console.log('--- t1');
     }
 
 
-
-  
 
