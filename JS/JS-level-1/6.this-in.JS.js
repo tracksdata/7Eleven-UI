@@ -32,7 +32,7 @@ function f1(){ // f1 context
 //-----------------------------------------
 
 var ename='Ozvitha';
-var emp={ // emp is an object which belongs to an global context
+var emp={ // emp is an object which belongs to a global context
     ename:'Praveen',
     age:76,
 
@@ -141,9 +141,22 @@ function getFood(pay){// in the stack memory a new memory block wiyh name 'getFo
 return 'Biryani';
 }
 
-console.log(getFood()); // ? 
+//console.log(getFood()); // ? 
 
 
+function getFood(){
+    return{
+        name:'Mini Tiffien',
+        ename:'Praveen',
+        location:'Hyderabad',
+        sayHi:function(){
+
+        }
+    }
+}
+
+//var food=getFood();
+//console.log(food);
 
 
 
