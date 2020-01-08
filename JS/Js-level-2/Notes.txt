@@ -13,3 +13,36 @@ ES6: new syntax and features
 
 -------------------------------
 
+UI - Design
+-------------------------
+
+using DOM (Document Object Model) api
+-----------------------------------------
+
+    -> for HTML page manupultions
+    -> can create , retrieve , update , delete HTML elements
+    -> can chnge elements inner text/html content
+    -> can change elements attributes/properties
+    -> can change elements style (css)
+    -> can vaidate form-fields before submiting to the server
+    -> can rich UI-componennts like autocomplete, datapickers, calendar..etc
+.........
+
+using XHR (XML Http Request) obejct  
+    -> Ajax / fetch api
+    -> Aynch server side communication
+
+using timer api
+----------------
+  setInterval
+  setTimeout
+
+  
+
+
+
+
+
+
+
+
