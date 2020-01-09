@@ -50,10 +50,14 @@ btn2.addEventListener('click',e=>{
 var myUsers=document.querySelectorAll('#user-list li');
 
 for(var mu of myUsers){
-    mu.addEventListener('click',function(){
-        this.style.color='red';
+    mu.addEventListener('click',e=>{
+        console.log(e.target);
+        
+        e.target.style.color='red';
     })
 }
+
+
 
 //-------------------------------------------------------
 
