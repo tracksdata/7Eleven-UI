@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Document</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="container">
+
+    <hr />
+    <h1> Todo app </h1>
+    <hr />
+
+
+    <div class="col-md-6 form-group">
+        <div class="alert alert-info ">
+            <input class="form-control" id="new-todo" placeholder="What needs to be done?"/>
+        </div>
+    
+ 
+        <div class="card">
+            <div class="card-header bg-light">
+                 <div class="form-check form-check-inline">
+                       <input type="checkbox" class="form-check-input" id="complete-all" />
+                       <label for="checkbox" class="form-check-label">Complete All</label> 
+                 </div>
+                                            
+                   
+            </div>
+            
+            <div class="card-body" id="todos">
+              
+            </div>
+
+            <div class="card-footer">
+                <span class="badge badge-danger" id="items-left">0</span> Items Left
+                <button class="btn btn-sm bg-light" id="all">All</button>
+                <button class="btn btn-sm bg-light" id="active">Active</button>
+                <button class="btn btn-sm bg-light" id="completed">Completed</button>
+                <button class="btn btn-sm bg-light" id="clear-completed">Clear Completed</button>
+
+            </div>
+
+        </div>
+       
+       
+        <hr />
+    
+    </div>
+   
+    <script src="./index.js"></script>
+</body>
+
+
+</html>

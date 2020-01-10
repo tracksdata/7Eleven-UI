@@ -1,0 +1,17 @@
+{
+    "employees":[
+
+        {"id":"10","name":"Praveen","salary":8778},
+        {"id":"11","name":"James","salary":8778},
+        {"id":"12","name":"Bucky","salary":8778},
+        {"id":"13","name":"Ozvitha","salary":8778},
+        {"id":"14","name":"Ford","salary":8778}
+    
+    ],
+
+    "departments":[
+        {"id":10,"name":"IT"},
+        {"id":11,"name":"Accounts"},
+        {"id":12,"name":"HR"}
+    ]
+}

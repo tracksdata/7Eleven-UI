@@ -15,6 +15,23 @@ let orders=[
  // 2. copy only order amount of filtered objects
  // 3. add amount of all copied orders
 
+
+
+ let textField=document.querySelector('#user');
+ let userList=document.querySelector('#user-list');
+
+
+ textField.addEventListener('keyup',e=>{
+     
+    if(e.which===13){
+        var newLiElement=document.createElement('li');
+        newLiElement.textContent=textField.value;
+        userList.appendChild(newLiElement);
+    }
+     
+ })
+
+
  function orderSummary(id){
  var sum=orders.filter(order=>order.id===id)
 .map(order=>order.amt)
