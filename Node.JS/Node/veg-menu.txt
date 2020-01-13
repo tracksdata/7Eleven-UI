@@ -1,0 +1,4 @@
+1.Idle
+2.Vada
+3.Pongal
+4.Dosa

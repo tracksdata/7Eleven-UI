@@ -1,0 +1,15 @@
+Web Services
+-------------------
+
+ 2 ways 
+ 1. SOAP (XML) -> WSDL 
+ 2. REST (Text and XML )
+    -> All Modren Browsers supoorts text based communication 
+
+HTTP Methods
+-----------------
+1. GET
+2. POST
+3. PUT
+4. DELETE
+

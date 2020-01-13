@@ -1,3 +1,4 @@
+/*
 let trainer={
     name:'Arindam',
    doTeach:function(){
@@ -7,11 +8,12 @@ let trainer={
       }
      /*  let askQues=(q)=>{ // =>
           console.log(this.name+' is answring '+q);
-       }*/
+       }
        console.log(this.name+' teaching ends');        
        return askQues;
    }   
 }
+
 
 
 var t1={name:'James'};
@@ -22,6 +24,7 @@ var askQuestion=trainer.doTeach();
 askQuestion.call(t1,'Q1');
 askQuestion.call(t2,'Q2');
 askQuestion.call(t3,'Q3');
+*/
 
 //-----------------------------------
 
@@ -29,15 +32,20 @@ function Person(name,age)
 {
    this.name=name;
     this.age=age;
+
    let incAge=function(){
-       this.age=0;
+       //this.age=0;
        console.log(this.name+' -> '+this.age); 
    }
+   return incAge();
    
-}
-setInterval(incAge,1000);
+};
+//var incAge= Person('abc',34);
+//setInterval(incAge,1000);
 let p =Person('Praveen',67);
-p();
+//let p1=Person('James',43);
 
+//p();
+//p1();
 
 
