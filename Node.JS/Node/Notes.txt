@@ -175,3 +175,17 @@ use :
 
 
    Middleware  => a function which executes between request & response
+
+
+
+
+//-----------------------------------
+
+1. Intro to Node
+2. Blockng vs non blocking IO
+3. events
+4. server
+
+
+
+
