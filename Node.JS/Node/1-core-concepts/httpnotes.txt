@@ -1,0 +1,44 @@
+Http Notes
+-------------------------
+
+HTTP Status codes
+--------------------------
+1 - 199 -  1x: Information
+200-299 - 2x: Success : 200 success
+300-399 - 3x: Redirections : 
+400-499 - 4x: Client side errors : 403 - Forbidden
+500-599 - 5x: Server side errors
+
+------------------------------------------------
+Node: Server will commmunicate with cliwnt with status codes
+
+-----------------------------------------------------------------------
+
+HTTP Methods in rest api
+------------------------------------
+
+How to invoke functions in the server with HTTP methods?
+
+1. GET    : loads data  from server to the client
+2. POST   : post data into server from Client
+3. PUT    : update obejcts in the server for client request
+4. DELETE : delete object in the server for the cliemt request
+
+-------------------------------------------------------------------
+
+HOw to read request data from client into server.
+
+=> Query Parameter
+----------------------------
+http://localhost:3000/name=Praveen&age=87&addr=Hyderabad
+
+Note: all the client data is available in the request object
+
+
+
+
+
+
+
+
+

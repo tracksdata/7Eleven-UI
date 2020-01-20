@@ -1,0 +1,23 @@
+Web Application project structure
+---------------------------------------
+1. source code like .js should be moved to src folder
+2. images folder contains common immages to all the files inm src folder
+
+----------------------------------------------------------------------
+package depedency management ?
+
+-> package.json
+-> package.json internally managed by npm 
+
+-> to create this package.json file use following command
+
+npm init
+
+------------------
+to get all thej dependenccies into your application 
+npm install
+
+
+
+
+
