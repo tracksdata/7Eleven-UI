@@ -191,7 +191,7 @@ app.use(express.static(__dirname+'/public')) // loads only from public
 //app.use(express.static(__dirname+'.')) // loads all folder data
 
 //let num=require('c:/abc/test');
-app.use('/todos/:name',(req,res,next)=>{
+/* app.use('/todos/:name',(req,res,next)=>{
     if(req.params.name.length<=3){
         res.send('User name must have grater than 3 letters');
         return;
@@ -201,7 +201,7 @@ app.use('/todos/:name',(req,res,next)=>{
 
 app.use('/todos/:name',(req,res,next)=>{
     res.send('Your name is validated.. '+req.params.name)
-})
+}) */
 /* 
 app.get('/todos',(req,res)=>{
     res.send('Uuser namme must be provied...');
@@ -217,6 +217,37 @@ app.get('/todos/:userName',(req,res)=>{
     console.log('Usrr name is '+user);
 }) */
 
+
+app.use('/products',(req,res,next)=>{
+    console.log('Validation');
+    next(); 
+})
+
+app.use('/products',(req,res,next)=>{
+    let user='admin123';
+    if(user!='admin' || user==null || user==undefined){
+       throw Error('My Own Error message')// throw clause means eoor handled...
+        //return false;
+    }
+   
+    console.log('Authentication successfull');
+
+    //res.send(403,'Authentication error problem');
+    //return false;
+    next(); 
+})
+
+
+app.use('/products',(req,res,next)=>{
+    console.log('Data-Parsing ');
+    next(); 
+})
+
+
+
+app.use("/products",(req,res,next)=>{
+    res.send(['Item-1','Item-2','Item-3']);
+})
 
 
 

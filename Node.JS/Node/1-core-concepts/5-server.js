@@ -162,7 +162,7 @@ server.on('request',(req,res)=>{
 
 */
 
-server.on('request',(request,response)=>{
+/* server.on('request',(request,response)=>{
 
     const requestUrl=request.url;
     console.log(request.url);
@@ -188,5 +188,10 @@ server.on('request',(request,response)=>{
     response.write('General Reuqets is processing');
     response.end();
 
-})
+}) */
+
+
+app
+
+
 
