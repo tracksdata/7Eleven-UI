@@ -9,3 +9,10 @@ exports.sayHello=function(){
  exports.p2=function(){console.log('p2 function')}
  exports.p3=function(){console.log('p3 function')}
 
+ exports.ft=function(){
+     return function(){
+         console.log('--- Testing.....');
+         
+     }
+ }
+

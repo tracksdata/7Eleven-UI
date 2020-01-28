@@ -8,13 +8,14 @@ app.sayHello();
 app.p1();
 app.p2();
 app.p3();
-
-
-//app.sayHello();
+let t=app.ft;``
 
 //app.sayHello();
 
+//app.sayHello();
 
+
+console.log(typeof t);
 
 
 /* 
