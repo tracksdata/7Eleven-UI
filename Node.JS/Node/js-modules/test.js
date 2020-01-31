@@ -8,7 +8,7 @@ app.sayHello();
 app.p1();
 app.p2();
 app.p3();
-let t=app.ft;``
+let t=app.ft;
 
 //app.sayHello();
 
