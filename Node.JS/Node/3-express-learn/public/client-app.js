@@ -4,7 +4,6 @@ console.log('- client-app-js');
 
 let addBtn = document.querySelector('#product_add');
 let btn = document.querySelector('#products');
-let putDemo = document.querySelector('#put-demo');
 let findBtn = document.querySelector('#find-btn');
 findBtn.addEventListener('click', e => {
 
@@ -19,7 +18,7 @@ findBtn.addEventListener('click', e => {
                     generateFormForUpdate(product);
 
                 })
-            } 
+            }
             else { // Handle Text Response
                 return response.text().then(errorMessage => {
 
@@ -29,7 +28,7 @@ findBtn.addEventListener('click', e => {
             } // else end
 
         })
-    })
+})
 
 /*
 putDemo.addEventListener('click', e => {
@@ -83,10 +82,10 @@ function generateFormForUpdate(product) {
     const submitBtn = document.createElement('button');
 
 
-    formDiv.classList.add('col-6','col-md-6')
+    formDiv.classList.add('col-6', 'col-md-6')
     submitBtn.setAttribute("type", "button");
     submitBtn.textContent = "Update";
-    submitBtn.classList.add('btn','btn-primary')
+    submitBtn.classList.add('btn', 'btn-primary')
     inputFiledId.classList.add('form-control')
     inputFiledName.classList.add('form-control')
     inputFiledPrice.classList.add('form-control')
@@ -124,17 +123,16 @@ function generateFormForUpdate(product) {
     productForm.appendChild(nameDiv);
     productForm.appendChild(priceDiv);
     productForm.appendChild(btnDiv);
-    submitBtn.setAttribute('id', 'submit-updated-data');
+    submitBtn.setAttribute('id', 'submit-updated-product');
 
     formDiv.innerHTML = "";
     formDiv.appendChild(productForm);
 
-    let d = document.querySelector('#test-1');
-    console.log(d);
-    d.addEventListener('click', e => {
+    let updatedProduct = document.querySelector('#submit-updated-product');
+
+    updatedProduct.addEventListener('click', e => {
         product.name = inputFiledName.value;
         product.price = inputFiledPrice.value;
-        // console.log('ID:---> '+product.name);
 
         fetch('/api/products', {
             method: 'PUT',
@@ -144,11 +142,11 @@ function generateFormForUpdate(product) {
             body: JSON.stringify(product),
 
         })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
+          //  .then(res => res.json())
+           // .then(data => {
+            //    console.log(data);
 
-            })
+           // })
 
         console.log('test put');
 

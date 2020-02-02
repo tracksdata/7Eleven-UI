@@ -4,6 +4,11 @@
     
     <title>Document</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <style>
+    .space{
+        margin: 5px;
+    }
+    </style>
 </head>
 <body class="container mt-4">
     
@@ -11,13 +16,16 @@
         <h1> Web UI </h1>  <hr/>
     </div>
   
-    <button class="btn btn-primary" id="products">Get Products</button>
-    <button class="btn btn-primary" id="product_add">Add Product</button>
-    <input type="text" name="productId" id="productId">
-    <button class="btn btn-primary" id="find-btn">GO</button>
+ 
+    <div class="input-group">
+            <button class="btn btn-primary space" id="products">Get Products</button>
+            <button class="btn btn-primary space" id="product_add">Add Product</button>
+            <input type="text" class="form-control col-4 space" id="productId">
+            <span class="input-group-btn">
+                 <button class="btn btn-primary space" id="find-btn" type="button">Go!</button>
+            </span>
+         </div>
 
-
-    <br/>
     <hr/>
     <div id="form-div"></div>
     <br>

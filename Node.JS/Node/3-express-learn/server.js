@@ -53,13 +53,13 @@ app.put('/api/products', (req, res) => {
     console.log('put request');
 
     console.log(req.body);
-    res.send(product);
+    //res.send(product);
+    res.method='GET';
+    res.redirect('/');
+
     //res.redirect(301,"/");
 })
 
-app.put("/",(req,res)=>{
-    res.send("Hello");
-})
 
 app.get('/api/products/:id', (req, res) => {
     let id = req.params.id;
@@ -78,6 +78,6 @@ app.get('/api/products/:id', (req, res) => {
 })
 
 app.listen(3000, () => {
-    console.log('server started...');
+    console.log('server started on http://localhost:3000');
 
 });
