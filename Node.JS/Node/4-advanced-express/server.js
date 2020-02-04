@@ -1,22 +1,46 @@
 console.log('-- server.js');
 
+
 const express=require('express')
 const app=express();
 var bodyParser = require('body-parser')
-let products=[
-    {"id":"P001","name":"Pen","price":344},
-    {"id":"P002","name":"Gun","price":544},
-    {"id":"P003","name":"Mobile","price":38744},
-    {"id":"P004","name":"Laptop","price":545},
-    {"id":"P005","name":"Mouse","price":464},
-];
+var mysql = require('mysql')
+var db = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'root',
+    database: 'test'
+  });
+
+db.connect();
+
+let products=[];
+
+
+
+
+
 
 const baseUrl="/api/products";
 
 app.get(baseUrl,(req,res)=>{
+    db.query("select * from product",(error,rows)=>{
+       console.log(rows);
+       products=rows;
+       console.log('-------------------');
+       console.log(products);
+       res.send(products);
+       
+        // rows.forEach(row=>{
+         //   console.dir(row.id);
+           // products.push(JSON.stringify(row));
+           // res.send(row)
+            
+        //})
+    })
+    
 
 
-res.send(products);
 
 })
 
@@ -30,10 +54,13 @@ app.get(baseUrl+'/:pname',(req,res)=>{
     res.send(something);
 })
 
-app.use(bodyParser.json())
 
+app.use(bodyParser.json())
 app.post(baseUrl,(req,res)=>{
    
+    //db.query("insert into product ? ")
+    
+
     let newProduct=req.body;
     //res.send(newProduct);
     products.push(newProduct);
@@ -47,8 +74,17 @@ app.post(baseUrl,(req,res)=>{
 
 
 app.put(baseUrl,(req,res)=>{
-    console.log('put request');
-    res.send('put req')
+    console.log('put request ');
+    let newProduct=req.body;
+   
+    products=products.map(prod=>{
+        if(prod.id===newProduct.id){
+            return Object.assign({},newProduct)
+        }else
+        return prod;
+    })
+
+    res.send(products)
 })
 
 app.delete(baseUrl+'/:id',(req,res)=>{
