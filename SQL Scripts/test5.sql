@@ -111,3 +111,53 @@ INSERT INTO `user_details` VALUES ('user1', 'user1', 'user');
 INSERT INTO `user_details` VALUES ('user2', 'user2', 'user');
 INSERT INTO `user_details` VALUES ('user3', 'user3', 'user');
 COMMIT;
+
+
+
+select cust.user_id,cust.customer_name,cust.email_address,cust.mobile_number,commu.address_id,commu.addr_line1,commu.addr_line2,commu.city,commu.state,commu.pincode from customer cust left outer join
+delivery_address da on cust.user_id=da.user_id left outer join communication commu on da.address_id=commu.address_id where cust.user_id='user2'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
