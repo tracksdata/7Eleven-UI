@@ -10,7 +10,8 @@ function jsTick(){
     let time=new Date().toLocaleTimeString();
 
     let ui=`
-       <div class="alert alert-info">    
+       <div class="alert alert-info">  
+            <span> JS Span Element Data </span>  
             <span class="badge badge-primary" >${time}</span>
        </div>
     `
@@ -27,6 +28,7 @@ function reactTick(){
 
     let ui=
        <div class="alert alert-info">    
+            <span>Hello .. How are you...</span>
             <span class="badge badge-success" >{time}</span>
        </div>
     
