@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="container">
        
-       <StoryBox/>
+       <StoryBox title="Face-Book"/>
       
     </div>
   );
