@@ -11,14 +11,15 @@ class StoryBox extends Component {
             stories: [
                 { 'id': 1, 'author': 'Praveen', 'body': 'this is story-1' },
                 { 'id': 2, 'author': 'Bucky', 'body': 'this is story-2' }
-            ]
+            ],
         }
     }
 
     renderStories() {
-        let { stories } = this.state;
-        return stories.map((story,idx) => {
 
+        let { stories } = this.state;
+      
+        return stories.map((story,idx) => {
             return( // jsx
               <Story story={story} key={idx}/>
             );
@@ -34,6 +35,8 @@ class StoryBox extends Component {
                 <div className="card-header">story box</div>
                 <div className="card-body">
                     {this.renderStories()}
+                   
+                    <hr/>
                 </div>
             </div>
         )
