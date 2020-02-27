@@ -31,10 +31,10 @@ class App extends Component {
     return (
       <div className="container">
 
-        <div>
           <h1>{title} - by <span className="badge badge-warning">{trainer}</span></h1>
 
           <hr />
+          <ActionBox/>
 
   
   {/*
@@ -45,10 +45,10 @@ class App extends Component {
           <button className="btn btn-primary space"  onClick={e=>this.changeMessage('GE')}>GE</button>
 
   */}
-        </div>
+     
 
 
-       <ActionBox/>
+
 
 
 
