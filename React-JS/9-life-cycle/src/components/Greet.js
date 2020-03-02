@@ -12,7 +12,7 @@ class Greet extends Component {
 
         return (
             <div>
-
+<hr/>
                 <div className="card">
                     <div className="card-title bg-primary">
                         Greet Component
@@ -20,7 +20,8 @@ class Greet extends Component {
 
                     <div className="card-body">
                         <div className="text-center">
-                            <h1>  {this.props.message}</h1>
+                          
+                            <h1>  {this.props.message} - {this.props.countDown}</h1>
                             <hr/>
                             <span className="badge badge-warning">
                                 {new Date().toLocaleTimeString()}
@@ -41,9 +42,9 @@ class Greet extends Component {
 
     componentDidUpdate(prevProps, prevState, snapshot) {
         console.log("Greet::componentDidUpdate");
-       // console.log(this.props);
-       // console.log(prevProps) ; 
-     //  setInterval(()=>{
+        console.log(this.props);
+        console.log(prevProps) ; 
+     // setInterval(()=>{
        //     this.forceUpdate();
        //},1000);
     }

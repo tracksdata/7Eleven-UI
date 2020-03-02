@@ -1,5 +1,5 @@
 {
-  "name": "9-life-cycle",
+  "name": "10-life-cycle-v2",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,7 +8,6 @@
     "@testing-library/user-event": "^7.1.2",
     "bootstrap": "^4.4.1",
     "react": "^16.13.0",
-    "react-countdown-now": "^2.1.2",
     "react-dom": "^16.13.0",
     "react-scripts": "3.4.0"
   },

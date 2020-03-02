@@ -11,7 +11,10 @@ class App extends Component {
     console.log("APP::constructor");
     super(props);
     this.state = {
-      message: 'Message goes here'
+      message: 'Message goes here',
+      counter: 1,
+      seconds: '00',
+      minutes: '0'
     }
   }
 
@@ -22,49 +25,56 @@ class App extends Component {
 
 
 
+
+
   render() {
 
 
-    console.log("APP::render");
-    let { message } = this.state;
-    return (
-      <div className="container">
 
-        {message ? <Greet message={this.state.message} /> : null}
+    console.log("APP::render");
+    let { message, counter } = this.state;
+    console.log(counter);
+    
+    return (
+
+      <div className="container col-6">
+          <Greet message={message} />
+          <hr/>
+
         <div className="card">
+
           <div className="card-title bg-danger">
-            APP Component
+            APP Component - {counter}
                     </div>
 
           <div className="card-body">
             <div className="text-center">
-              <div className="text-center">
 
-                <hr />
+              <hr />
 
-                <button className="btn btn-success space" onClick={e => this.greetMe('Good Morning')}>GM</button>
-                <button className="btn btn-success space" onClick={e => this.greetMe('Good Afternoon')}>GF</button>
-                <button className="btn btn-success space" onClick={e => this.greetMe('Good Evening')}>GE</button>
-                <button className="btn btn-success space" onClick={e => this.greetMe()}>Remove</button>
+              <button className="btn btn-success space" onClick={e => this.greetMe('Good Morning')}>GM</button>
+              <button className="btn btn-success space" onClick={e => this.greetMe('Good Afternoon')}>GF</button>
+              <button className="btn btn-success space" onClick={e => this.greetMe('Good Evening')}>GE</button>
+              <button className="btn btn-success space" onClick={e => this.greetMe()}>Remove</button>
 
-
-              </div>
+          
             </div>
-
           </div>
 
         </div>
 
+
+
       </div>
+
     );
+    
+
   }
 
   componentDidMount() {
     console.log("APP::componentDidMount");
-    setTimeout(() => {
-      let response = 'Hello, react '
-      this.setState({ message: response });
-    }, 4000);
+    
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
