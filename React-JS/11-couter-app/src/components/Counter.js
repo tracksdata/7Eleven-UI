@@ -17,6 +17,9 @@ class Counter extends Component {
         return (
             <div className="mystyle">
               {this.props.lable}  <button className="btn btn-primary" onClick={e=>this.calculateTotalHits()}>{this.state.count}</button>
+              <span style={{margin:'3px'}}>
+              <i className="fas fa-trash-alt"></i>	
+              </span>
             </div>
         );
     }

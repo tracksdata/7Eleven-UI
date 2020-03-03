@@ -12,17 +12,26 @@ class CounterBox extends Component {
         let { total } = this.state;
         this.setState ({ total: total + e.value })
     }
+
+    renderButtons(){
+        let buttons=[10,20,-5,-20,50,100];
+        return buttons.map((btn,idx)=>{
+           return(
+            <div key={idx} className="alert alert-info myspace">
+            <Counter lable={btn} onAction={e =>this.calculateTotal(e)} />
+            </div>
+           ); 
+        })
+    }
+
     render() {
 
         return (
             <div className="card">
                 <div className="card-header"><h4>Counter-APP</h4></div>
 
-                <div className="card-body">
-                    <Counter lable={10} onAction={e =>this.calculateTotal(e)} />
-                    <Counter lable={20} onAction={e => this.calculateTotal(e)}/>
-                    <Counter lable={-5} onAction={e => this.calculateTotal(e)}/>
-                    <Counter lable={-20} onAction={e => this.calculateTotal(e)}/>
+                <div className="card-body row"> 
+                   {this.renderButtons()}
                 </div>
 
                 <div className="card-footer">
