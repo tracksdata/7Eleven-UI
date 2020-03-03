@@ -5,7 +5,8 @@ class CounterBox extends Component {
 
 
     state = {
-        total: 0
+        total: 0,
+        buttons:[10,20,-5,-20,100]
     }
 
     calculateTotal(e) {
@@ -14,7 +15,7 @@ class CounterBox extends Component {
     }
 
     renderButtons(){
-        let buttons=[10,20,-5,-20,50,100];
+        let {buttons}=this.state;
         return buttons.map((btn,idx)=>{
            return(
             <div key={idx} className="alert alert-info myspace">
@@ -24,13 +25,18 @@ class CounterBox extends Component {
         })
     }
 
+    addComponent(){
+        console.log('Value: '); 
+    }
+
     render() {
 
         return (
             <div className="card">
                 <div className="card-header"><h4>Counter-APP</h4></div>
-
+                <input className="col-2"   onBlur={e=>this.addComponent()}/>
                 <div className="card-body row"> 
+               
                    {this.renderButtons()}
                 </div>
 
