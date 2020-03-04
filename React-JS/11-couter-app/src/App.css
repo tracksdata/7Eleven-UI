@@ -1,6 +1,10 @@
 .mystyle{
-  float: left;
-  margin: 10px;
+  
+    margin: 10px;
+
+}
+.btn-space{
+  margin: 5px;
 }
 .myspace{
 margin: 10px;
