@@ -6,7 +6,7 @@ class CounterBox extends Component {
 
     state = {
         total: 0,
-        buttons: [10, 20, -5, -20, 100]
+        buttons: [10, 20, -5, -20, 100,-50]
     }
 
     calculateTotal(e) {
@@ -30,12 +30,13 @@ class CounterBox extends Component {
         let { buttons } = this.state;
         return buttons.map((btn, idx) => {
             return (
-                <div key={idx} className="alert alert-info col-2 myspace">
-                    <Counter lable={btn} onAction={e => this.calculateTotal(e)}
-                        removeAction={e => this.removeComponent(e)}
-                        addComponent={e => this.editComponent(e)}
-                    />
-                </div>
+                <Counter lable={btn}
+                    key={idx}
+                    onAction={e => this.calculateTotal(e)}
+                    removeAction={e => this.removeComponent(e)}
+                    addComponent={e => this.editComponent(e)}
+                />
+
             );
         })
     }
@@ -47,10 +48,9 @@ class CounterBox extends Component {
         let newLable = Number.parseInt(e.newLable);
 
         let status = buttons.includes(newLable);
-        buttons.map((button, idx) => (!status) ? (button === oldLable && !(isNaN(newLable))) ? buttons[idx] = newLable : buttons[idx] = oldLable : null);
-        if (!(isNaN(newLable))){
-            this.setState({ buttons: buttons, total: (total + (e.componentLable * e.count)) - e.oldLable * e.count })
-        }
+        buttons.map((button, idx) => (!(status)) ? (button === oldLable) ? buttons[idx] = newLable : null : null);
+        this.setState({ buttons: buttons, total: (total + (e.newLable * e.count)) - e.oldLable * e.count })
+
     }
     addNewComponent(e) {
         let key = e.which || e.keyCode;
@@ -67,6 +67,15 @@ class CounterBox extends Component {
 
     }
 
+    resetAll(e) {
+
+        console.log('--- reseting all');
+        let { buttons } = this.state;
+        buttons = [10, 20, -5, -20, 100,-50];
+        this.setState({ buttons: buttons, total: 0 })
+
+    }
+
     render() {
 
         return (
@@ -75,11 +84,18 @@ class CounterBox extends Component {
                 <div className="form-inline mt-3" style={{ alignSelf: 'center' }}>
                     <input className="form-control mr-1" onKeyPress={e => this.addNewComponent(e)} placeholder="New Lable" />
                     <button className="btn btn-danger" >Add</button>
+                    <button className="btn btn-danger" style={{ margin: '5px' }} onClick={(e) => { if (window.confirm('Are you sure you wish to delete this item?')) this.resetAll(e) }}>Reset</button>
+
                 </div>
                 <hr />
-                <div className="card-body row">
 
-                    {this.renderButtons()}
+                <div className="card-body">
+                    <div className="row">
+                        {this.renderButtons()}
+                    </div>
+
+
+
                 </div>
 
                 <div className="card-footer text-center">

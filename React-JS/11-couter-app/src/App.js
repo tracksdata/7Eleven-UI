@@ -7,7 +7,9 @@ import CounterBox from './components/CounterBox';
 function App() {
   return (
     <div className="container">
-     <CounterBox/>
+    
+        <CounterBox />
+
     </div>
   );
 }
