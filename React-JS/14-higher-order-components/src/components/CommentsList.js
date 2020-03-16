@@ -8,9 +8,8 @@ class CommentsList extends Component {
 
         super();
         this.state = {
-            commentsList:props.commentsList,
-            comments: store.getStore().comments['java'],
-            name: 'value will reolace in 5 secs'
+            commentsList: props.commentsList,
+            //comments: store.getStore().comments['java'],
         }
     }
 
@@ -18,23 +17,11 @@ class CommentsList extends Component {
 
         console.log("==> componentDidMount");
 
-        data.map(prod=>{
+        data.map(prod => {
             console.log(prod);
-            
-        })
-         
-     
-
-
-
-        setTimeout(() => {
-            this.setState({ name: 'Praveen' })
-        }, 5000)
-
-        store.subscribe(() => {
-            // ... fetch new topics from here
 
         })
+
 
     }
 
@@ -43,31 +30,47 @@ class CommentsList extends Component {
         let topics = store.subscribe(() => {
         })
         console.log(topics);
-
-
-
     }
 
     componentWillUnmount() { // only when component is destroyed
         console.log("==> componentWillUnmount");
-
         // ... un-subscribe 
     }
 
     renderComments() {
-        let { comments } = this.state;
+        let { commentsList } = this.props;
+       console.log(store.getStore().comments);
+        let comments=store.getStore().comments;
 
-        return comments.map((comment, idx) => {
-            return <li key={idx} className="list-group-item">{comment}</li>
-        })
+       // commentsList.map(comm=>{
+         //   let matchingComments=comments.filter(cc=>cc[comm]==cc);
+        //})
+
+        comments.map(element => {
+            console.log("====> "+element); 
+        });
+      
+
+      // commentsList.map(cc=>{
+       // console.log(store.getStore().comments[cc] );
+
+         
+     //  })
+       
+        //console.log("=========> "+status+"<==========");
+        
+      return  commentsList.map((comment,idx)=>{
+              return store.getStore().comments[comment].map((c, idx) => {
+            return <li key={idx} className="list-group-item">{c}</li>
+            })
+         })
+       
     }
 
     render() {// will call every time when state, props and fourceUpdate is called
         console.log("====> render");
-
         return (
             <div>
-                <h1>{this.state.name}</h1>
                 {this.renderComments()}
             </div>
         );

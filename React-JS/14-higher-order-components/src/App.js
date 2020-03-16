@@ -10,11 +10,11 @@ function App() {
 
       <div className="row">
         <div className="col-6 col-sm-6 col-md-6">
-          <TopicsList commentTopics="react,java" />
+          <TopicsList />
         </div>
 
         <div className="col-6 col-sm-6 col-md-6">
-          <CommentsList commentsList={['java', 'reactjs']} />
+          <CommentsList commentsList={['java', 'reactjs','javascripte']} />
         </div>
       </div>
 

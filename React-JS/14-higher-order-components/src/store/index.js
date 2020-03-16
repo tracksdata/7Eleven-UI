@@ -42,6 +42,11 @@ const store = {
                 'reactjs': [
                     'react is very powerfull',
                     'now a days reactive programing is very popular'
+                ],
+                'javascript':[
+                    'js is a language',
+                    'js is basics for all ui technologies',
+                    'js supports opps with es6 version'
                 ]
             }
         }

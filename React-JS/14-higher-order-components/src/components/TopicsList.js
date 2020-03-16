@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import store from '../store';
+import CommentsList from './CommentsList';
 
 class TopicsList extends Component {
     constructor(props) {
@@ -19,10 +20,19 @@ class TopicsList extends Component {
         // ... un-subscribe 
     }
 
+    test(e) {
+       
+    }
+
     renderTopics() {
         let { topics } = this.state;
         return topics.map((topic, idx) => {
-            return <li key={idx} className="list-group-item">{topic}</li>
+            return <li
+                key={idx}
+                className="list-group-item"
+                onClick={e => this.test(topic)}
+                style={{ cursor: 'pointer' }}
+            >{topic}</li>
         })
     }
 
