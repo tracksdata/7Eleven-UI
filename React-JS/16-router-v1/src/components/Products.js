@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 class Products extends Component {
-
-
-
     // pure js code
     test = async () => {
         const data = await fetch('http://localhost:8080/api/products');
